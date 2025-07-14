@@ -14,8 +14,29 @@ using namespace std;
 
 // using recursion
 
+
+void insertInStack(int x, stack<int>& s){
+    if(s.size()==0 || s.top()<x){
+        s.push(x);
+    }
+    else{
+        int a= s.top();
+        s.pop();
+        insertInStack(x,s);
+        s.push(a);
+    }
+}
+void reverseStack(stack<int>& s){
+    if(s.size()>0){
+        int x= s.top();
+        s.pop();
+        reverseStack(s);
+        insertInStack(x,s);
+    }
+}
+
 void sortStack(stack<int>&s){
-    
+    reverseStack(s);
 }
 int main(){
     stack<int> s;
