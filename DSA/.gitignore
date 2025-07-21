@@ -1,0 +1,38 @@
+# Bytecode files (for Java, Python)
+*.class
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output (for C/C++/Java)
+*.out
+*.o
+*.obj
+*.exe
+*.jar
+*.log
+
+# Test/input files (optional)
+*.in
+*.out
+*.tmp
+
+# Node-related (if using any JS)
+node_modules/
+
+# Backup/swap files
+*~
+*.swp
+*.bak
+*.tmp
