@@ -6,6 +6,7 @@
 __pycache__/
 
 # IDE/editor settings
+.vscode
 .vscode/
 .idea/
 *.sublime-project
