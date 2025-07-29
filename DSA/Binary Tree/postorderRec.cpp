@@ -35,22 +35,6 @@ treeNode* convertArrToBinaryTree(vector<int>arr){
     return root;
 }
 
-treeNode* preOrderTraversal(treeNode* node){
-    if(node==NULL) return NULL;
-    cout<<node->data<<" ";
-    preOrderTraversal(node->left);
-    preOrderTraversal(node->right);
-    return node;
-}
-
-treeNode* inOrderTraversal(treeNode* node){
-    if(node==NULL) return NULL;
-    inOrderTraversal(node->left);
-    cout<<node->data<<" ";
-    inOrderTraversal(node->right);
-    return node;
-}
-
 treeNode* postOrderTraversal(treeNode* node){
     if(node==NULL) return NULL;
     postOrderTraversal(node->left);
@@ -63,10 +47,6 @@ int main()
 {
     vector<int> arr={1,2,3,4,5,6,7,8,9,10};
     treeNode* root= convertArrToBinaryTree(arr);
-    root= preOrderTraversal(root);
-    cout<<endl;
-    root= inOrderTraversal(root);
-    cout<<endl;
     root= postOrderTraversal(root);
 return 0;
 }
