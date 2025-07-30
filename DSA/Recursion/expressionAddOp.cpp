@@ -16,10 +16,11 @@ public:
             }
             return;
         }
+        
         for(int j=i ; j< num.size() ;j++){
             if(j>i && num[i]=='0') break ;  // this skips exprssions like 05,06
             string currStr= num.substr(i,j-i+1);
-            int currNum= stoll(currStr);
+            long long currNum= stoll(currStr);
             if(i==0 ){                               // for first number
                 dfs( j+1 , currStr, currNum, currNum, num, target);
             }else{
@@ -29,9 +30,6 @@ public:
             }
         }
         
-        for(int j=i ; j<num.size() ;j++){
-            if(j>i && num[i]=='0') break;
-        }
     }
 };
 int main(){
