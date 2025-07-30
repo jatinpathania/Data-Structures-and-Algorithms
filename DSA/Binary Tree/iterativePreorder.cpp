@@ -21,7 +21,6 @@ void preorderTraversal(TreeNode* root) {
         if(curr->right!=NULL) s.push(curr->right);
         if(curr->left!=NULL) s.push(curr->left);
     }
-
 }
 
 int main() {
