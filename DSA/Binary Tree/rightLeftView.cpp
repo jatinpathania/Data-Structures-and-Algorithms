@@ -31,8 +31,8 @@ private:
     void recursionRight(Node* root, int level, vector<int>& res){
         if(root==NULL) return;
         if(res.size()== level) res.push_back(root->data);
-        recursionLeft(root->right, level+1, res);
-        recursionLeft(root->left, level+1, res);
+        recursionRight(root->right, level+1, res);
+        recursionRight(root->left, level+1, res);
     }
 
     void recursionLeft(Node* root, int level, vector<int>& res){
