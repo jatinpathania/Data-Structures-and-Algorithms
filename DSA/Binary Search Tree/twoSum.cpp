@@ -64,7 +64,7 @@ bool findTarget(TreeNode* root, int k) {
     int i= l.next();
     int j= r.next();
     while(i<j){
-        if( i+j == k) return false;
+        if( i+j == k) return true;
         else if(i+j <k) i= l.next();
         else j= r.next();
     }
