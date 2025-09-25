@@ -21,7 +21,6 @@ void sortArray(vector<int>& arr, int n){
 }
 
 
-
 //better sol
 // void sortArray(vector<int>& arr, int n){
 //     int count0=0, count1=0, count2=0;
