@@ -1,12 +1,9 @@
-#include<bits/stdc++.h>
-using namespace std;
+// In a complete binary tree, --
+// every level is completely filled except the last level
+// nodes always added from the left and filled towards the right 
 
-int getMin(int arr[]){
+//for node i
 
-}
-
-int main(){
-    int heap[]= {3,5,6,8,10,9,7};
-    int res= getMin(heap);
-    cout<<res<<endl;
-}   
+// left child - 2*i
+// right child- 2*i +1
+// parent- i/2 
