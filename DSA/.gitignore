@@ -28,6 +28,7 @@ Thumbs.db
 *.in
 *.out
 *.tmp
+practice.cpp
 
 # Node-related (if using any JS)
 node_modules/
