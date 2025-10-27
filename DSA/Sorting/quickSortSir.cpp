@@ -2,7 +2,7 @@
 using namespace std;
 
 int partition(vector<int>&arr, int l, int r){
-    int j=0;
+    int j=l;
     int x= arr[r];
     for(int i=l ;i<=r ;i++){
         if(arr[i] <=x){
