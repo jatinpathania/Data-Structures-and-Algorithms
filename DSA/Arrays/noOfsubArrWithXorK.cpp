@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//optimal approach- O()
+//optimal approach- O(N) and O(n log n ) space
 int subarraysWithXorK(vector<int> a, int k){
     map<int,int> mpp;
     int Xor=0;
