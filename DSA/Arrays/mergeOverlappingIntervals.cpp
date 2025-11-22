@@ -4,7 +4,7 @@ using namespace std;
 class Solution {
 public:
 
-    //optimal approach- O()
+    //optimal approach- O(N log N) and O(N) space
     vector<vector<int>> merge(vector<vector<int>>& intervals){
         sort(intervals.begin(), intervals.end());
         int n= intervals.size();
