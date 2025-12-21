@@ -1,5 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
+// complexity
+// Time Complexity: O(9(n ^ 2)
+// Space Complexity: O(1)
+
 class Solution{
 public:
     bool isValid(vector<vector<char>> & board,int row,int col,char c){

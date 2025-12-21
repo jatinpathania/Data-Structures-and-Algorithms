@@ -2,6 +2,11 @@
 #include <vector>
 #include <string>
 using namespace std;
+
+//Complexity
+// Time Complexity: O(N!)
+// Space Complexity: O(N)
+
 class Solution{
 public:
     void solve(int col,vector<string>& board,vector<int>&leftRow,vector<int>&lowerDiagonal,vector<int>&upperDiagonal,vector<vector<string>>&ans,int n){

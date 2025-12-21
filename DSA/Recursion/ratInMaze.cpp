@@ -59,6 +59,11 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
+//Complexity
+// Time Complexity: O(4^(N*N))
+// Space Complexity: O(N*N)
+
 class Solution{
   void solve(int i, int j, vector < vector < int >> & a, int n, vector < string > & ans, string move,
     vector < vector < int >> & vis, int di[], int dj[]) {
