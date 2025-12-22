@@ -1,6 +1,11 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+//Time complexity
+// Time Complexity: O(m * n * 4^L)
+// Space Complexity: O(L)
+
 class Solution {
 public:
     bool find(int i,int j,int m,int n,vector<vector<char>>&board,string& word,int k){
