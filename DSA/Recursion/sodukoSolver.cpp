@@ -11,6 +11,12 @@ public:
             if(board[i][col]==c) return false;
             if(board[row][i]==c) return false;
             if(board[3 *(row/3) + i/3 ][3* (col/3)+ i%3]==c) return false;
+            // explanation for 3x3 matrix
+            // row/3 tells which 3×3 box the cell belongs to.
+            // Multiplying by 3 gives the starting row and column of that box.
+            // A 3×3 box has exactly 9 cells, so I iterate from 0 to 8
+            // Integer division i/3 moves vertically across rows and modulus i%3 moves horizontally across columns.   
+            // By adding the offsets to the starting position, we correctly visit all 9 cells of the 3×3 sub-grid
         }
         return true;
     }
