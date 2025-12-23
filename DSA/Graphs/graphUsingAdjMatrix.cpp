@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+//More costly
 class Graph1{
     private:
     int n;
@@ -37,3 +38,5 @@ int main(){
 
     graph.print();
 }
+
+//For weighted graphs, instead of putting 1, we put actual weight in matrix for the edges

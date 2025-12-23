@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Less costly
 class Graph1{
     private:
     int n;
@@ -39,3 +40,5 @@ int main(){
 
     graph.print();
 }
+
+// For storing weighted graphs, store nodes as pairs consisting of edge weight b/w edges instead of just he nodes with indexes.
