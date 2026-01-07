@@ -1,36 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Event {
-    double time;
-    int type;   // +1 = arrival, -1 = departure
-};
-
-bool cmp(const Event &a, const Event &b) {
-    if (a.time == b.time)
-        return a.type < b.type;   // departure first
-    return a.time < b.time;
-}
-
+//Complexity- O(n log n)
 int minPlatforms(vector<double> &arrival, vector<double> &departure) {
-    int n = arrival.size();
-    vector<Event> events;
-
-    for (int i = 0; i < n; i++) {
-        events.push_back({arrival[i], +1});
-        events.push_back({departure[i], -1});
+    int n= arrival.size();
+    sort(arrival.begin(), arrival.end());
+    sort(departure.begin(), departure.end());
+    int i=1; //arrival poitner
+    int j=0; //departure pointer
+    int platforms= 1;
+    int maxPlatforms=1;
+    while(i<n && j<n){
+        if(arrival[i] <= departure[j]){
+            platforms++;
+            i++;
+            maxPlatforms= max(maxPlatforms, platforms);
+        }
+        else{
+            platforms--;
+            j++;
+        }
     }
-
-    sort(events.begin(), events.end(), cmp);
-
-    int curr = 0, ans = 0;
-
-    for (auto &e : events) {
-        curr += e.type;
-        ans = max(ans, curr);
-    }
-
-    return ans;
+    return maxPlatforms;
 }
 
 int main() {
