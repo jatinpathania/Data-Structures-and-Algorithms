@@ -9,7 +9,7 @@ public:
         int mid= low+ (high- low)/2;
         if(target== nums[mid]) return mid;
         else if(target > nums[mid]) return binarySearch(nums, mid+1, high, target);
-        return binarySearch(nums, low, high-1, target);
+        return binarySearch(nums, low, mid-1, target);
     }
 
     int search(vector<int>& nums, int target) {
