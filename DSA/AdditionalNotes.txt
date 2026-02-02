@@ -1,0 +1,53 @@
+Memory model
+
+1. Local variables goes in stack in memory model
+2. Pointers goes in Heap in memory model
+3. static and global variables goes in data members in memory model
+4. uninitilised global variables goes in BSS in memory model
+5. if declared dynamically, pointers goes in Heap, but their variables take space in stack
+
+----------------------------------------------------------------------------------------------------------------------------------
+Compile and Run time variable declaration
+
+int *main_heap;            // This is stored in memory while compilation
+main_heap= malloc(sizeof(int))           //This is stored value while running
+Dynamic memory is allocated at runtime not compile time
+
+Example
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int globalVar = 10;   // global variable
+
+int main(){
+    int a = 5;                   // local variable (stack)
+    int *p = (int*)malloc(sizeof(int)); // pointer on stack, data on heap
+    *p = 20;
+
+    printf("%d %d %d\n", globalVar, a, *p);
+
+    free(p);
+    return 0;
+}
+
++----------------------+
+|        Stack         |
++----------------------+
+| a = 5                |
+| p = 0x1000 ----------|----+
++----------------------+    |
+                              |
++----------------------+    |
+|        Heap          |<---+
++----------------------+
+| 20                   |   ← malloc memory
++----------------------+
+
++----------------------+
+| Global / Data Segment|
++----------------------+
+| globalVar = 10       |
++----------------------+
+
+--------------------------------------------------------------------------------------------------------------------------------------
