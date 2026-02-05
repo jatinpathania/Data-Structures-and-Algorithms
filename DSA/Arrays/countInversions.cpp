@@ -5,6 +5,10 @@ using namespace std;
 //Space Complexity: O(N)
 //As declaring global variable method is not good, so we should do internally
 
+//Array: {5, 4, 3, 2, 1}
+// Inversions: (5,4), (5,3), (5,2), (5,1), (4,3), (4,2), (4,1), (3,2), (3,1), (2,1)
+// Total count: 10
+
 int merge(vector<int> &arr, int low, int mid, int high) {
     vector<int> temp;
     int left=low;

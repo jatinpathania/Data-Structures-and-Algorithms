@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// move all eles <= x to left and other to right
 // optimal sol
 void shiftLeftOrRight(vector<int> arr, int x){
     int j=0;
