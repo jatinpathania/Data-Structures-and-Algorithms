@@ -20,6 +20,7 @@ int merge(vector<int> &arr, int low, int mid, int high) {
             temp.push_back(arr[left]);
             left++;
         }
+        
         // right is smaller
         else{
             temp.push_back(arr[right]);
